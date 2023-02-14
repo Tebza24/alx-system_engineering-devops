@@ -1,6 +1,12 @@
 #!/bin/bash
+
+# Set initial count to 0
 count=0
+
+# Loop through directories and sub-directories, excluding current and parent directory
 for dir in $(find . -mindepth 1 -type d ! -name "." ! -name ".."); do
     ((count++))
 done
+
+# Print the count
 echo $count
